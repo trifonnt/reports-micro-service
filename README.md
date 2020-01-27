@@ -16,13 +16,13 @@ Currently any user with a valid token can run any available report.  Authorizati
 
 Configuration values are specified through environment variables.
 
-Name               | Required? | Notes/Description
------------------- | --------- | ---------------------------
-REPORTS_DIR | Yes       | Direction where report definition (*.jrxml files) live.
-JWT_SECRET         | Yes       | JWT secret.  Needed for authentication.
-JWT_AUDIENCE       | No        | If provided, will also validate JWT audience during authentication.
-JWT_ISSUER         | No        | If provided, will also validate JWT issuer during authentication.
-JDBC_CONNECTION_STRING | No | Database connection string.  For example, jdbc:mysql://localhost:3306/mydatabase?user=me&password=mypassword.  If blank will run reports against an empty data source.
+Name                  | Required? | Notes/Description
+--------------------- | --------- | ---------------------------
+REPORTS_DIR           | Yes       | Direction where report definition (*.jrxml files) live.
+JWT_SECRET            | Yes       | JWT secret.  Needed for authentication.
+JWT_AUDIENCE          | No        | If provided, will also validate JWT audience during authentication.
+JWT_ISSUER            | No        | If provided, will also validate JWT issuer during authentication.
+JDBC_CONNECTION_STRING | No        | Database connection string.  For example, jdbc:mysql://localhost:3306/mydatabase?user=me&password=mypassword.  If blank will run reports against an empty data source.
 
 If a configuration value is not properly set, the application will throw a `ConfigurationException` on startup.  it may be necessary to restart the server after changing a config value.
 
